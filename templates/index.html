@@ -1,0 +1,63 @@
+{% extends 'base.html' %} {% block head %}
+<title>Liste as ideias</title>
+{% endblock %} {% block body %}
+
+<h1>Sua lista de ideias para projetos</h1>
+
+<div id="above-table">
+  <div style="text-align: right; font-weight: 600">
+    Total: {{ ideias|length }}
+  </div>
+  <a href="/insert" style="align-items: center; display: flex; gap: 1rem">
+    <img
+      src="/static/images/add.png"
+      alt="adicionar"
+      width="20rem"
+      height="20rem"
+    />
+    <p>Adicionar</p>
+  </a>
+</div>
+<table>
+  <tr>
+    <th>Título</th>
+    <th>Descrição</th>
+    <th>Duração</th>
+    <th>Categorias</th>
+    <th>Data de criação</th>
+    <th>Ações</th>
+  </tr>
+  {% for ideia in ideias %}
+  <tr>
+    <td>{{ ideia.nome }}</td>
+    <td id="descricao">{{ ideia.ideia }}</td>
+    <td>{{ ideia.tempo_dias }} dias</td>
+    <td>
+      {%if ideia.categoria%}{% for cat in ideia.categoria.split(",") %}
+      <span id="categoria">{{ cat }}</span>
+      {% endfor %}{%else%}-{%endif%}
+    </td>
+    <td>
+      {% if ideia.data_criacao %}
+      <div>{{ ideia.data_criacao.strftime("%d/%m/%Y") }}</div>
+      <div>{{ ideia.data_criacao.strftime("%H:%M") }}</div>
+      {% else %} - {% endif %}
+    </td>
+    <td id="action-column">
+      <a href="/view/{{ ideia.id }}">
+        <img src="/static/images/view.png" width="20rem" />
+      </a>
+
+      <a href="/delete/{{ ideia.id }}">
+        <img src="/static/images/delete.svg" width="20rem" />
+      </a>
+
+      <a href="/edit/{{ ideia.id }}">
+        <img src="/static/images/edit.png" width="20rem" />
+      </a>
+    </td>
+  </tr>
+  {% endfor %}
+</table>
+
+{% endblock %}

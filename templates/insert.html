@@ -1,0 +1,42 @@
+{% extends 'base.html' %} {% block head %}
+<title>Adicionar ideia</title>
+{% endblock %} {% block body %}
+<div>
+  <h1>Adicionar ideia</h1>
+  <br />
+  <form method="POST" action="/insert" style="background-color: #940d0355">
+    <label for="nome">Qual o nome?</label>
+    <br />
+    <input type="text" id="nome" name="nome" placeholder="Título" required />
+    <br />
+    <label for="tempo">Quantos dias para concluir o MVP?</label>
+    <br />
+    <input type="number" id="tempo" name="tempo" min="1" max="99" value="1" />
+    <br />
+    <label for="categoria">Quais as categorias?</label>
+    <br />
+    <select id="categoria" name="categoria" size="1" multiple>
+      <option value="crud">CRUD</option>
+      <option value="mobile">MOBILE</option>
+      <option value="devops">DEVOPS</option>
+      <option value="unifor">UNIFOR</option>
+      <option value="pessoal">PESSOAL</option>
+      <option value="trabalho">TRABALHO</option>
+    </select>
+    <br />
+    <label for="descricao">Descreva sua ideia:</label>
+    <br />
+    <textarea
+      type="text"
+      id="descricao"
+      name="descricao"
+      placeholder="CRUD de almoxarifado..."
+      rows="5"
+      cols="50"
+      required
+    ></textarea>
+    <br />
+    <input type="submit" value="Adicionar" />
+  </form>
+</div>
+{% endblock %}

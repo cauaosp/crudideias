@@ -1,0 +1,49 @@
+{% extends 'base.html' %} {% block head %}
+<title>Editar</title>
+{% endblock %} {% block body %}
+<div>
+  <h1>Editar ideia deaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa {{ideia.nome}}</h1>
+  <br />
+  <form method="POST" action="/edit/{{ideia.id}}" style="background-color: #940d0355">
+    <label for="nome">Qual o nome?</label>
+    <br />
+    <input
+      type="text"
+      id="nome"
+      name="nome"
+      placeholder="Título"
+      value="{{ideia.nome}}"
+      required
+    />
+    <br />
+    <label for="tempo">Quantos dias para concluir o MVP?</label>
+    <br />
+    <input type="number" id="tempo" name="tempo" min="1" max="99" value="{{ideia.tempo_dias}}" />
+    <br />
+    <label for="categoria">Quais as categorias?</label>
+    <br />
+    {% set categorias = ideia.categoria.split(',') %} {% set opcoes =
+    ["crud","mobile","devops","unifor","pessoal","trabalho"] %}
+
+    <select name="categoria" size="1" multiple>
+      {% for op in opcoes %}
+      <option value="{{ op }}" {% if op in categorias %}selected{% endif %}>
+        {{ op.upper() }}
+      </option>
+      {% endfor %}
+    </select>
+    <br />
+    <labelF for="descricao">Descreva sua ideia:</label>
+    <br />
+    <textarea
+      type="text"
+      id="descricao"
+      name="descricao"
+      rows="5"
+      cols="50"
+    >{{ideia.ideia}}</textarea>
+    <br />
+    <input type="submit" value="Adicionar" />
+  </form>
+</div>
+{% endblock %}

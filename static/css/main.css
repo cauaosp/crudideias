@@ -1,0 +1,110 @@
+/* general */
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f3d2c1;
+  color: #fef6e4;
+  display: grid;
+  justify-content: center;
+}
+
+/* text elements */
+
+h1 {
+  color: #f582ae;
+  text-align: center;
+}
+
+/* buttons */
+
+#categoria {
+  border: 1px solid white;
+  padding: 0.5rem;
+  border-radius: 2rem;
+  background-color: #ffffff11;
+}
+
+a {
+  text-decoration: none;
+  font-weight: 600;
+  font-size: small;
+  display: flex;
+}
+
+a:hover {
+  opacity: 0.8;
+}
+
+/* table */
+
+#descricao {
+  max-width: 20rem;
+  text-overflow: ellipsis;
+}
+
+table {
+  border-collapse: collapse;
+  text-align: center;
+  background-color: #6d6d6d;
+  overflow-x: auto;
+}
+
+th {
+  font-weight: bolder;
+}
+
+td {
+  font-weight: lighter;
+  max-width: 10rem;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+th,
+td {
+  border: 1px solid #fef6e4;
+  padding: 1rem;
+}
+
+#action-column {
+  display: flex;
+  justify-content: space-around;
+  width: 8rem;
+  padding-block: 2rem;
+}
+
+#above-table {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: black;
+}
+
+/* forms */
+
+form {
+  display: grid;
+  padding: 1rem;
+}
+
+/* view page */
+
+#view-content {
+  background-color: #0e735fbb;
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.view-info {
+  display: grid;
+  gap: 0.5rem;
+  border: 1px solid white;
+  padding: 1rem;
+}
+
+#view-description {
+  grid-column: 2 span;
+}

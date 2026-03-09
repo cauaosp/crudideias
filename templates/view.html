@@ -1,0 +1,35 @@
+{% extends 'base.html' %} {% block head %}
+<title>Visualizar</title>
+{% endblock %} {% block body %}
+<h1>ID: {{ideia.id}}</h1>
+<div id="view-content">
+  <div class="view-info">
+    <h3>Qual o nome?</h3>
+    <div>{{ideia.nome}}</div>
+  </div>
+  <div class="view-info">
+    <h3>Quantos dias para concluir o MVP?</h3>
+    <div>{{ideia.tempo_dias}}</div>
+  </div>
+  <div class="view-info">
+    <h3>Quais as categorias?</h3>
+    <div>
+      {%if ideia.categoria%}{% for cat in ideia.categoria.split(",") %}<span
+        id="categoria"
+        >{{ cat }}</span
+      >{% endfor %}{%else%}-{%endif%}
+    </div>
+  </div>
+  <div class="view-info">
+    <h3>Data de criação</h3>
+    {% if ideia.data_criacao %}
+    <div>{{ ideia.data_criacao.strftime("%d/%m/%Y") }}</div>
+    <div>{{ ideia.data_criacao.strftime("%H:%M") }}</div>
+    {% else %} - {% endif %}
+  </div>
+  <div class="view-info" id="view-description">
+    <h3>Descreva sua ideia:</h3>
+    <div>{{ideia.ideia}}</div>
+  </div>
+</div>
+{% endblock %}
