@@ -3,7 +3,7 @@
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
-  background-color: #f3d2c1;
+  background-color: #bae3dc;
   color: #fef6e4;
   display: grid;
   justify-content: center;
@@ -12,8 +12,12 @@ body {
 /* text elements */
 
 h1 {
-  color: #f582ae;
+  color: #f58282;
   text-align: center;
+}
+
+select {
+  background-color: #fff;
 }
 
 /* buttons */
@@ -30,10 +34,15 @@ a {
   font-weight: 600;
   font-size: small;
   display: flex;
+  color: #000;
 }
 
 a:hover {
   opacity: 0.8;
+}
+
+a:active {
+  color: 000;
 }
 
 /* table */
@@ -46,7 +55,7 @@ a:hover {
 table {
   border-collapse: collapse;
   text-align: center;
-  background-color: #6d6d6d;
+  background-color: #0e735fbb;
   overflow-x: auto;
 }
 

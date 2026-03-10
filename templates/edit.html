@@ -2,9 +2,11 @@
 <title>Editar</title>
 {% endblock %} {% block body %}
 <div>
-  <h1>Editar ideia deaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa {{ideia.nome}}</h1>
-  <br />
-  <form method="POST" action="/edit/{{ideia.id}}" style="background-color: #940d0355">
+  <h1>Editar ideia {{ideia.nome}}</h1>
+  <a href="/" style="margin-bottom: 1rem;">
+    <img src="/static/images/back-button.png" alt="voltar" width="20" />
+  </a>
+  <form method="POST" action="/edit/{{ideia.id}}" style="background-color: #0e735fbb">
     <label for="nome">Qual o nome?</label>
     <br />
     <input
