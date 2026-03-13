@@ -3,12 +3,12 @@ version: "3.9"
 services:
   db:
     image: postgres:16
-    container_name: postgres_db
+    container_name: crudideias_db
     restart: always
     environment:
-      POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: postgres
-      POSTGRES_DB: ideiasdb
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+      POSTGRES_DB: ${DB_NAME}
     ports:
       - "5433:5432"
     volumes:
@@ -21,7 +21,7 @@ services:
     depends_on:
       - db
     env_file:
-      - .env.docker
+      - .env
     ports:
       - "4949:4949"
 
