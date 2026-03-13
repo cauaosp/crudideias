@@ -1,16 +1,16 @@
 # 💡 Lista de Ideias
 
-Um **CRUD de ideias** desenvolvido com **Flask + PostgreSQL + Docker**.
+Um **CRUD de ideias** com **Flask + PostgreSQL + Docker**.
 
 ---
 
 ## 🤖 Tecnologias utilizadas
 
-* Flask
-* SQLAlchemy
-* PostgreSQL
 * Docker
-
+* Flask
+* PostgreSQL
+* SQLAlchemy
+  
 ---
 
 ## 📦 Como rodar o projeto
