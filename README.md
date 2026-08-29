@@ -1,77 +1,23 @@
-# 💡 Lista de Ideias
+# Lista de Ideias 💡
 
-Um **CRUD de ideias** com **Flask + PostgreSQL + Docker**.
-
----
-
-## 🤖 Tecnologias utilizadas
-
-* Docker
-* Flask
-* PostgreSQL
-* SQLAlchemy
-  
----
-
-## 📦 Como rodar o projeto
-
-### 1️⃣ Clone o repositório
-
-```bash
-git clone https://github.com/seu-usuario/crudideias.git
-cd crudideias
-```
-
-### 2️⃣ Configure as variáveis de ambiente
-
-Crie seu arquivo `.env` a partir do exemplo:
-
-```bash
-cp .env.example .env
-```
-
-Se quiser, altere os valores conforme necessário.
-
-### 3️⃣ Inicie os containers
-
-```bash
-docker compose up --build
-```
-
-Criará e inicializará os 2 contêineres:
-
-* 🐘 PostgreSQL (banco de dados)
-* 🌐 Aplicação Flask
-
-### 4️⃣ Acesse a aplicação
-
-Abra no navegador:
-
-```
-http://localhost:4949
-```
----
-
-## 🛠 Funcionalidades
-
-* ➕ Adicionar ideia
-* 📄 Visualizar ideia
-* ✏️ Editar ideia
-* ❌ Remover ideia
+Um CRUD simples para criar, visualizar, editar e remover ideias.
 
 ---
 
-## 📂 Estrutura do projeto
+### 🧑‍💻 Stacks
 
-```
-crudideias
-│
-├── app.py
-├── Dockerfile
-├── compose.yml
-├── requirements.txt
-├── templates/
-├── static/
-├── .env.example
-└── README.md
-```
+🐍 Backend: `Python` • `Flask` • `SQLAlchemy`
+
+🐘 Banco de Dados: `PostgreSQL`
+
+☁️ Infraestrutura: `Docker`
+
+---
+
+### 🛠️ Funcionalidades
+
+➕ Adicionar ideias • 📄 Visualizar • ✏️ Editar • ❌ Remover
+
+---
+
+👨‍💻 Desenvolvido por [Cauã Paiva](https://github.com/cauaosp)
