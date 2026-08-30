@@ -18,4 +18,4 @@ Um site simples e prático para armazenar localmente idéias de projetos, coloca
 4) Inicie o projeto: `docker compose up --build`
 5) Acesse: `http://localhost:4949`
 
-👨‍💻 Desenvolvido por [Cauã Paiva](https://github.com/cauaosp)
+###### ☸️ Desenvolvido por [Cauã Paiva](https://github.com/cauaosp)
